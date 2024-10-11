@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class RadixConverter {
+    
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            while (true) {
+                System.out.print("Enter the base of the number system (2-16) or 'STOP' to exit: ");
+                String baseInput = scanner.nextLine().trim();
+                if (baseInput.equalsIgnoreCase("STOP")) {
+                    break;
+                }
+                
+                int base;
+                try {
+                    base = Integer.parseInt(baseInput);
+                    if (base < 2 || base > 16) {
+                        System.out.println("Please enter a valid base between 2 and 16.");
+                        continue;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a number between 2 and 16.");
+                    continue;
+                }
+                
+                System.out.print("Enter the number in base " + base + ": ");
+                String numberInput = scanner.nextLine().trim();
+                
+                try {
+                    // Convert the input number to decimal
+                    int decimalValue = Integer.parseInt(numberInput, base);
+                    
+                    // Print the conversions from decimal to all bases
+                    System.out.println("Converted values:");
+                    for (int i = 2; i <= 16; i++) {
+                        System.out.println("Base " + i + ": " + Integer.toString(decimalValue, i).toUpperCase());
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid number for base " + base + ". Please try again.");
+                }
+            }
+        }
+        System.out.println("Program exited.");
+    }
+}
