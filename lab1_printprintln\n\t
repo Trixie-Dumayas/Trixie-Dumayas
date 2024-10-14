@@ -1,0 +1,21 @@
+package Unit1;
+
+public class StoreInvoice {
+    public static void main(String[] args){
+        System.out.println("\"Fictional Store\"");
+        System.out.println("123 Main Street");
+        System.out.println("City, Country 12345");
+        
+        System.out.println("\nItem\t\tQuantity\tPrice");
+        System.out.println("--------------------------");
+        
+        System.out.println("Apple\t\t3\t\t$2.97");
+        System.out.println("Banana\t\t2\t\t$1.18");
+        System.out.println("Orange\t\t5\t\t$3.95");
+        
+        System.out.println("---------------------------");
+        System.out.println("Total Amount Due: \t\t$8.10");
+        
+        System.out.println("\nThank you for shopping with us!");
+    }
+}
