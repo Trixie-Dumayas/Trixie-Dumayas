@@ -1,0 +1,42 @@
+package Unit1;
+
+import java.util.Scanner;
+
+public class ShoppingCalculator {
+    public static void main (String[] args){
+        Scanner sc = new Scanner (System.in);
+        
+        int item1price = 0;
+        int item2price = 0;
+        int item3price = 0;
+        
+        int item1qty = 0;
+        int item2qty = 0;
+        int item3qty = 0;
+        
+        System.out.println("Enter the price of item 1: ");
+        item1price = sc.nextInt();
+        System.out.println("Enter the quantity of item 1: ");
+        item1qty = sc.nextInt();
+        
+        System.out.println("Enter the price of item 2: ");
+        item2price = sc.nextInt();
+        System.out.println("Enter the quantity of item 2: ");
+        item2qty = sc.nextInt();
+        
+        System.out.println("Enter the price of item 3: ");
+        item3price = sc.nextInt();
+        System.out.println("Enter the quantity of item 3: ");
+        item3qty = sc.nextInt();
+        
+        int subtotal = (item1price * item1qty) + (item2price * item2qty) + (item3price * item3qty);
+        double discount = 0.05 * subtotal;
+        double salesTax = 0.12 * (subtotal - discount);
+        double total = (subtotal - discount) + salesTax;
+        
+        System.out.println("Subtotal: PHP " + subtotal);
+        System.out.println("Discount: PHP " + discount);
+        System.out.println("Sales Tax: PHP " + salesTax);
+        System.out.println("Final Total: PHP " + total);
+    }
+}
