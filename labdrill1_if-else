@@ -1,0 +1,23 @@
+package Unit2;
+
+import java.util.Scanner;
+
+public class LabDrill1 {
+    public static void main(String[] args){
+        Scanner letter = new Scanner (System.in);
+        int grade = 0;
+        
+        System.out.println("Enter numerical grade: ");
+        grade = letter.nextInt();
+        
+        if (grade >= 90){
+            System.out.println("Grade: A");
+        } else if (grade >= 80){
+            System.out.println("Grade: B");
+        } else if (grade >= 70){
+            System.out.println("Grade: C");
+        } else if (grade >= 60){
+            System.out.println("Grade: D");
+        }
+    }
+}
