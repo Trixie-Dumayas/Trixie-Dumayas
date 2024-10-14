@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class DUMAYAS_IfElseDiscountCalc {
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        int choice = 0;
+        
+        while (true) {
+            System.out.println("Enter the total purchase amount:");
+            choice = myObj.nextInt();
+            
+            if (choice <= 1000){
+                System.out.println("PHP " + choice);
+                System.out.println("Discount applied: None");
+                System.out.println("Final price after discount: PHP " + choice);
+            }
+            else if (choice < 5000){
+                System.out.println("PHP " + choice);
+                System.out.println("Discount applied: 5%");
+                var discount1 = choice * 0.05;
+                var total1 = choice - discount1;
+                System.out.println("Final price after discount: PHP " + total1);
+            }
+            else if (choice <= 10000){
+                System.out.println("PHP " + choice);
+                System.out.println("Discount applied: 10%");
+                var discount2 = choice * 0.10;
+                var total2 = choice - discount2;
+                System.out.println ("Final price after discount: PHP " + total2);
+            }
+            else if (choice > 10000){
+                System.out.println("PHP " + choice);
+                System.out.println("Discount applied: 15%");
+                var discount3 = choice * 0.15;
+                var total3 = choice - discount3;
+                System.out.println ("Final price after discount: PHP " + total3);
+            }
+        }  
+    }
+}
