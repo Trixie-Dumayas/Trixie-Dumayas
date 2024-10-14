@@ -1,0 +1,17 @@
+package Unit1;
+
+public class AreaAndPerimeter {
+    public static void main(String[] args){
+        int length = 12;
+        int width = 15;
+        
+        System.out.println("The length of the garden is " + length);
+        System.out.println("The width of the garden is " + width);
+        
+        int area = length * width;
+        int perimeter = 2 * (length * width);
+        
+        System.out.println("The area of the garden is " + area);
+        System.out.println("The perimeter of the garden is " + perimeter);
+    }
+}
